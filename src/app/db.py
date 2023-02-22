@@ -1,5 +1,3 @@
-import os
-
 from sqlalchemy import (
     Column,
     DateTime,
@@ -12,8 +10,9 @@ from sqlalchemy import (
 from sqlalchemy.sql import func
 
 from databases import Database
+from app.config import settings
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = settings.db_url
 
 # SQLAlchemy
 engine = create_engine(DATABASE_URL)
