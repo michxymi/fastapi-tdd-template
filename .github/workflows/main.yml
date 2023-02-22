@@ -3,17 +3,17 @@
 # and deploy the FastAPI app to Heroku
 name: fastapi-github-actions-test
 
-# on: 
-#   #Trigger the workflow on a push event to the master branch only
-#   push: 
-#     branches: [main]
+on: 
+  # Trigger the workflow on a push event to any branch
+  push: 
+    branches: ['**']
 
-#A workflow job running sequentially
+# A workflow job running sequentially
 jobs:
   build:
-    #runs-on: defines The workflow runner
+    # runs-on: defines The workflow runner
     runs-on: ubuntu-latest 
-    #steps: defines a series of tasks executed by the Job
+    # steps: defines a series of tasks executed by the Job
     steps:
     - uses: actions/checkout@v2
     - run: |   # To fetch all history for all tags and branches
