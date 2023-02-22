@@ -3,10 +3,10 @@
 # and deploy the FastAPI app to Heroku
 name: fastapi-github-actions-test
 
-on: 
-  #Trigger the workflow on a push event to the master branch only
-  push: 
-    branches: [main]
+# on: 
+#   #Trigger the workflow on a push event to the master branch only
+#   push: 
+#     branches: [main]
 
 #A workflow job running sequentially
 jobs:
