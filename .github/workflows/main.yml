@@ -48,4 +48,5 @@ jobs:
     - name: Unit testing
       run: |
         # Run all unit tests
-        pytest .
+        docker-compose up -d --build
+        docker-compose exec web pytest .
