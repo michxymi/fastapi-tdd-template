@@ -37,9 +37,15 @@ jobs:
       run: |
         # Code formatting with black, check every python file in the src directory 
         black --check src
-    
+
     # Task for linting with flake8
     - name: Lint with flake8
       run: |
         # Check every python file in the src directory 
         flake8 src
+
+    # Task for unit testing
+    - name: Unit testing
+      run: |
+        # Run all unit tests
+        pytest .
